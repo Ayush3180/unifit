@@ -1,0 +1,42 @@
+{% extends 'uni_fit/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Login
+{% endblock %}
+
+{% block body_block %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<div class="wrapper">
+    <div class="box">
+
+        <h1>Sign in to UniFit</h1>
+
+        <form method="post" action=".">
+            {% csrf_token %}
+
+            <div class="inputBox">
+                {{ form.username }}
+                <p>{{form.username.errors}}</p>
+                <label>USERNAME</label>
+            </div>
+            
+            <div class="inputBox">
+                {{ form.password }}
+                <p>{{form.password.errors}}</p>
+                <label>PASSWORD</label>
+            </div>
+            <br>
+            {{ form.errors }}
+            <button type="submit" id="submit">Sign In</button>
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+
+        <p>New to UniFit? <a href="{% url 'registration_register' %}"> Create an account.</a></p>
+        
+    </div>
+</div>
+    
+{% endblock %}

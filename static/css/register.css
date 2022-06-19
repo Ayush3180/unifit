@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+*{
+    font-family:'Poppins';
+}
+
+.wrapper{
+    background: url('/static/images/background5.jpg') no-repeat fixed center;
+    background-size: cover;
+    height:130vh;
+}
+
+.box {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    padding:50px;
+    /*background: rgba(0, 0, 0, 0.8);*/
+    background: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15 25 rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.box h1 {
+    color: #031A5B;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.box .inputBox {
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-color: #C2E812;
+    border: 2px;
+    background: #FFFFFF;
+}
+
+.box .inputBox input:hover{
+    outline: #C2E812;
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    margin-top: -25px;
+    font-weight: lighter;
+}
+
+input:hover{
+    border: #C2E812;
+}
+
+label {
+    top: -25px;
+    left: 0;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    display: block;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+}
+
+form{
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+a{
+    color: #38B6FF;
+}
+
+p a:hover{
+    color: #031A5B;
+}
+
+p{
+    text-align: center;
+}
+
+#submit:hover {
+    background:#FFFFFF ;
+    color: #38B6FF;
+}
+
+#submit {
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 2px solid #38B6FF;
+    padding: 14px 28px;
+    cursor: pointer;
+    background: #38B6FF;
+    color: #ffffff;
+}
+
+nav li a{
+    display: none;
+}
+
+#show{
+    display:contents;
+}
+
+.name {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.preferences {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.about-you {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+.name label {
+    display: block;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    font-weight: lighter;
+}
+
+.preferences label {
+    display: block;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    font-weight: lighter;
+}
+
+
+.name input{
+    width:100%;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-color: #C2E812;
+    border: 2px;
+    background: #FFFFFF;
+}
+
+.preferences input{
+    width:100%;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-color: #C2E812;
+    border: 2px;
+    background: #FFFFFF;
+    align-items: center;
+}
+
+.about-you input{
+    width:20%;
+    padding: 10 0;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-color: #C2E812;
+    border: 2px;
+    background: #FFFFFF;
+    align-items: center;
+}
+
+.about-you label{
+    display: inline;
+    font-weight: lighter;
+}
+
+#pref{
+    margin-top: -23px;
+}
+
+select{
+    width: 175px;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+
+
+
+  li{
+    color: #f33427;
+    font-size: 12px;
+  }
+
+ 

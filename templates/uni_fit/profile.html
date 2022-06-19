@@ -1,0 +1,104 @@
+{% extends 'uni_fit/base.html' %}
+
+{% block title_block %}
+    Profile
+{% endblock %}
+
+{% block body_block %}
+
+<div id="category-banner" class="text-center">
+  <div class="container-fluid">
+  
+<h3>User name : {{user.username}}</h1>
+
+<form action="{% url 'uni_fit:profile' %}" method="GET" id="form_cdd" onSubmit="loadValue(event)">
+<div class="row">
+  <div class="col-12 col-xl-8">
+      <div class="card card-body bg-white border-light shadow-sm mb-4">
+          <h2 class="h5 mb-4">Profile information</h2>
+          <div class="row">                            
+              <div class="col-md-6 mb-5">              
+                  <div class="form-group">
+                      <label for="grade">Grade in percentage</label>
+                      <input name="grade" class="form-control" id="grade" type="number">                  
+                  </div>
+              </div>
+            </dev>                           
+            <div class="center" style="margin: auto; background: rgba(3,26,92,0.75);  border-radius: 20px;" >
+              <table id="unitable" style = "background: transparent">
+                  <tr>
+                      <th class="rank  mb-4">University Rank</th>
+                      <th class="rank  mb-4">University</th>
+                  </tr>
+                  {% for university in universities %}
+                      <tr>
+                          <td class="rank" style = "color:rgba(255,255,255,1); opacity: 1; text-align: center;">{{university.UniRank}}</td>
+                          <td><a href="{% url 'uni_fit:university' university.UniId %}" style = "color:rgba(255,255,255,1); text-align: center;">{{university.UniName }}</a></td>                          
+                      </tr>   
+                  {% endfor %}
+              </table>
+            </div>
+            
+      </div>          
+    </div>
+  </div>
+
+  <div class="col-12 col-xl-4">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card border-light text-center p-0">
+                <div class="profile-cover rounded-top">
+                  <img src="/static/images/profile-cover2.png"  class="bg-cover rounded-top"></div>                
+                <div class="card-body pb-5">
+                    <img src="/static/images/default-profile-picture.png" id="output"
+                         class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4">
+                    <h4 class="h3">{{ profile.user.username }}</h4>
+                    <h4 class="font-weight-normal">{{ profile.user.get_full_name }}</h4>
+                    <h5 class="font-weight-normal">
+                        {{ request.user.email }}
+                    </h5>
+                    <p class="text-gray mb-4">{{ profile.address|default:'' }}</p>                    
+                </div>
+            </div>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'auth_password_change' %}">Change Password</a>
+        </li>
+        <div class="col-12">
+            <div class="card card-body bg-white border-light shadow-sm mb-4">
+                <h2 class="h5 mb-4">Select profile photo</h2>
+                <div class="d-xl-flex align-items-center">
+                    <div class="file-field">
+                        <div class="d-flex">
+                            <div class="d-flex">                                
+                                <input name="avatar" type="file" onchange="loadFile(event)">
+                                <div class="d-md-block text-left">
+                                    <div class="font-weight-normal text-dark mb-1">Choose Image</div>
+                                    <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--CSS & JS-->
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);  
+};
+</script> 
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}" />
+
+{% endblock %}
+
+

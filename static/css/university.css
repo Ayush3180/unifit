@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+*{
+    font-family:'Poppins';
+}
+
+h1{
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    color:rgba(3, 26, 91, 1);
+    font-size: 50px;
+    margin-top: -5px;
+    background-color: rgba(248,249,250,255);
+    border:rgba(248,249,250,255);
+}
+
+h4{
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    color:rgba(255,255,255,1);
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+h3{
+    background-color: rgba(3, 26, 91, 1);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: #FFFFFF;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.review-heading{
+    background-color: rgba(3, 26, 91, 1);
+    margin-bottom: -10px;
+}
+
+
+i{
+    padding-right: 10px;
+    
+}
+
+ul.redditbull{
+    list-style-image: url('/static/images/reddit.jpg'); 
+}
+
+.post{
+    border: 2px;
+    width: 100%;
+    padding: 5px;
+    margin-top: -12px;
+}
+
+.post a{
+    text-decoration: none;
+    color:rgba(255,255,255,1);
+    
+    
+}
+
+.post a:hover{
+    color: #031A5B;
+}
+
+.reddit{
+    overflow: auto;
+    text-align: justify;
+    font-size: 15px;
+    height:800px;
+    width:auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    position: relative;
+    background-color:rgba(252,68,4,0.90);
+    border-radius: 20px; 
+    top: 50px
+}
+
+.reddit::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.reddit a{
+    text-decoration: none;
+}
+
+.uni-image{
+    width: 100%;
+    margin-left: 100px;   
+}
+
+.section1 div{
+    display: inline;
+}
+
+.uni-info{
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    background-color: rgba(3, 26, 91, 1);
+    margin-left: 100px; 
+    border-radius: 20px;
+    position: relative;
+    bottom: auto; 
+    right: 10px;
+    padding: 45px;
+    height:800px;
+    overflow: auto;
+}
+
+.uni-info::-webkit-scrollbar {
+    display: none; 
+}
+
+.review-section{
+    position: relative;
+    overflow:auto;
+    float: right;
+    font-size: 15px;
+    border-radius: 20px;
+    text-align: justify;
+    height:800px;
+    width:auto;
+
+}
+
+.review-section::-webkit-scrollbar {
+    display: none; 
+}
+
+.column1 {
+    float: left;
+    width: 30%;
+    margin: 2% 2% 2% 2%;
+}
+
+.column2 {
+    width: auto;
+    margin: 2% 2% 2% 2%; 
+}
+
+.column3 {
+    float: right;
+    width: 30%;
+    margin: 2% 2% 2% 2%; 
+}
+
+
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+@media (min-width: 992px){
+    .col-md-8 {
+        width: 100%;
+    }
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
